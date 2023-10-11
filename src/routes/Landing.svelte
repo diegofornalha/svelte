@@ -11,7 +11,7 @@
         </p>
         <h1 class="text-4xl md:text-7xl lg:text-9xl font-bold">🪄 Seu Desejo é Uma Ordem!</h1>
         <p class="my-8 text-xl md:text-2xl lg:text-3xl font-medium">
-            Vamos Costruir Juntos um maravilhos Ecosistema para o Brasil!
+            Vamos Construir Juntos um Maravilhoso Ecossistema para o Brasil!
         </p>
         <button
             on:click={() => push("/login")}
