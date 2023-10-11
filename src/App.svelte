@@ -17,8 +17,8 @@
     "/login": Login,
     "/signup": SignUp,
     "/todos": wrap({
-      component: Todo,
-      conditions: [() => !!$state.account],
+       component: Todo as any,
+       conditions: [() => !!$state.account]
     }),
     "*": Landing,
   };

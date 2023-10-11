@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { push } from "svelte-spa-router";
-
   import { state, todos } from "../store";
 
   import Item from "../lib/Item.svelte";
