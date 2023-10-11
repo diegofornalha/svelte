@@ -1,7 +1,5 @@
 <script lang="ts">
     import { push } from "svelte-spa-router";
-
-    import LogoSvelte from "../assets/svelte.svg";
     import LogoGithub from "../assets/github.svg";
 </script>
 
@@ -14,7 +12,6 @@
         <h1 class="text-4xl md:text-7xl lg:text-9xl font-bold">toTooooDoooo</h1>
         <p class="my-8 text-xl md:text-2xl lg:text-3xl font-medium">
             A Simple To-do App built with
-            <img class="w-8 h-8 inline" src={LogoSvelte} alt="Svelte Logo" /> Svelte
         </p>
         <button
             on:click={() => push("/login")}
