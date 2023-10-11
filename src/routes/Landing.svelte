@@ -27,7 +27,7 @@
     <div
         class="rounded-full mx-4 transition duration-200 ease-in-out transform hover:-translate-y-3 hover:scale-125 hover:shadow-4xl"
     >
-        <a href="http://github.com/appwrite/appwrite">
+        <a href="http://github.com/diegofornalha">
             <img class="w-10 h-10 inline" src={LogoGithub} alt="GitHub Logo" />
         </a>
     </div>
