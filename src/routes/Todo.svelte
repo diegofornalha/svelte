@@ -32,14 +32,14 @@
   <div class="my-auto p-16 rounded-lg text-center">
     <div class="font-bold text-3xl md:text-5xl lg:text-6xl">
       📝 <br />
-      &nbsp; Lista de Desejos na Flow Brasil
+      &nbsp; Seus Desejos
     </div>
 
     <form on:submit|preventDefault={addTodo}>
       <input
         type="text"
         class="w-full my-8 px-6 py-4 text-xl rounded-lg border-0 focus:ring-2 focus:ring-gray-800 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-xl shadow-md"
-        placeholder="🤔   What to do today?"
+        placeholder="🧞 A Inspiração é por sua conta."
         bind:value
       />
     </form>
