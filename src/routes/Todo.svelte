@@ -52,7 +52,7 @@
   </div>
 </section>
 
-<section class="absolute bottom-0 right-0 py-3 px-6 mr-8 mb-8">
+<section class="fixed top-4 right-4">
   <button
     on:click={logout}
     class="mx-auto mt-4 py-3 px-12 font-semibold text-md rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none"
