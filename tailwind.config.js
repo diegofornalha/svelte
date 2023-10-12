@@ -3,7 +3,7 @@ module.exports = {
   safelist: {
     standard: [/^w-/, /^bg-[a-z]*-500/],
   },
-  darkMode: 'media', // ou 'class'
+  darkMode: 'media',
   theme: {
     extend: {},
     fontFamily: {
