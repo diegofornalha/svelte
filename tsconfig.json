@@ -10,7 +10,9 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "jsx": "preserve",
+    "types": ["svelte", "jest"]
   },
   "include": [
     "src/**/*.d.ts",
