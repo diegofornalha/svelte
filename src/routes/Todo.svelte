@@ -2,33 +2,31 @@
   import { onMount } from "svelte";
   import { push } from "svelte-spa-router";
   import { state, todos } from "../store";
-
   import Item from "../lib/Item.svelte";
 
   let value = "";
 
   const addTodo = () => {
-    todos.addTodo(value);
-    value = "";
+    if (value.trim() !== "") {
+      todos.addTodo(value);
+      value = "";
+    }
   };
 
   const logout = async () => {
     try {
       await state.logout();
-    } catch (error) {
-      state.alert({ color: "red", message: error.message });
-    } finally {
       state.init(null);
       push("/");
+    } catch (error) {
+      state.alert({ color: "red", message: error.message });
     }
   };
 
   onMount(todos.fetch);
 </script>
 
-<section
-  class="container h-screen max-h-screen px-3 max-w-xl mx-auto flex flex-col"
->
+<section class="container h-screen max-h-screen px-3 max-w-xl mx-auto flex flex-col">
   <div class="my-auto p-16 rounded-lg text-center">
     <div class="font-bold text-3xl md:text-5xl lg:text-6xl">
       📝 <br />
@@ -57,6 +55,6 @@
     on:click={logout}
     class="mx-auto mt-4 py-3 px-12 font-semibold text-md rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none"
   >
-    Logout 👋
+    Sair 👋
   </button>
 </section>
