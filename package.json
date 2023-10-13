@@ -30,6 +30,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-resolver-esm": "^1.0.0",
     "jest-transform-stub": "^2.0.0",
+    "jest-transform-svelte": "^2.1.1",
     "postcss": "^8.4.17",
     "postcss-load-config": "^4.0.1",
     "svelte": "^3.50.1",
