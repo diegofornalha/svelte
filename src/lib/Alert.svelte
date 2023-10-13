@@ -35,7 +35,6 @@
     }
 
     .close-button:focus {
-       
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
     }
 </style>
