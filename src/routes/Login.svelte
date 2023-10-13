@@ -2,8 +2,8 @@
     import { push } from "svelte-spa-router";
     import { state } from "../store";
 
-    let email: string,
-        password: string = "";
+    let email: string = "";
+    let password: string = "";
 
     const login = async () => {
         if (!checkForm) {
@@ -11,13 +11,10 @@
         }
         try {
             await state.login(email, password);
+            state.alert({ color: "green", message: "Bem-vindo de volta!" }); // Adicionando a mensagem de boas-vindas
             push("/todos");
         } catch (error) {
-            if (error.response && error.response.status === 401) {
-                state.alert({ color: "red", message: "Email ou senha inválidos." });
-            } else {
-                state.alert({ color: "red", message: error.message || "Erro desconhecido ao fazer login." });
-            }
+            state.alert({ color: "red", message: error.message });
         }
     };
 
