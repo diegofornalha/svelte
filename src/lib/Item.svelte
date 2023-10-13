@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Todo } from "../store";
     import { todos } from "../store";
+    import { toast } from 'svelte-easy-toast';
 
     import IconDelete from "../assets/delete.svg";
 
@@ -16,6 +17,10 @@
             $id: todo.$id,
             isComplete,
         });
+
+        if (isComplete) {
+            toast({ text: "Tarefa realizada!", type: 'success', position: 'bottom-right' });
+        }
     };
 </script>
 

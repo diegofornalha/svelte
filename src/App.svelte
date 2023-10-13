@@ -11,6 +11,7 @@
   import Login from "./routes/Login.svelte";
   import SignUp from "./routes/SignUp.svelte";
   import Todo from "./routes/Todo.svelte";
+  import { SvelteEasyToast } from "svelte-easy-toast";
 
   const routes = {
     "/": Landing,
@@ -37,5 +38,6 @@
   });
 </script>
 
+<SvelteEasyToast />
 <Alert />
 <Router {routes} on:conditionsFailed={() => push("/")} />
