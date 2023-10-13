@@ -12,7 +12,7 @@
     "allowJs": true,
     "checkJs": true,
     "jsx": "preserve",
-    "types": ["svelte", "jest"]
+    "types": ["svelte", "jest", "node"]
   },
   "include": [
     "src/**/*.d.ts",
