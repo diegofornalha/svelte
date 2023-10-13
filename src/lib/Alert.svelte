@@ -12,10 +12,30 @@
         <span class="inline-block align-middle font-semibold mr-8">
             {$state.alert.message}
         </span>
-        <button
-            class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
+        <button 
+            class="close-button"
+            tabindex="0"
+            on:click={() => state.alert(null)}
+            on:keydown={(e) => e.key === 'Enter' && state.alert(null)}
         >
-            <span on:click={() => state.alert(null)}>×</span>
+            ×
         </button>
     </div>
 {/if}
+
+<style>
+    .close-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 2em;
+        color: inherit; 
+        padding: 0; 
+        outline: none; 
+    }
+
+    .close-button:focus {
+       
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+    }
+</style>
