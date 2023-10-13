@@ -12,13 +12,12 @@
     "allowJs": true,
     "checkJs": true,
     "jsx": "preserve",
-    "types": ["svelte", "jest", "node"]
+
   },
   "include": [
     "src/**/*.d.ts",
     "src/**/*.ts",
     "src/**/*.js",
     "src/**/*.svelte",
-    "src/routes/__tests__/*.test.ts"
   ]
 }
