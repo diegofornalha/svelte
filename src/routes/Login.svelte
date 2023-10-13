@@ -1,6 +1,5 @@
 <script lang="ts">
     import { push } from "svelte-spa-router";
-
     import { state } from "../store";
 
     let email: string,
@@ -14,7 +13,11 @@
             await state.login(email, password);
             push("/todos");
         } catch (error) {
-            state.alert({ color: "red", message: error.message });
+            if (error.response && error.response.status === 401) {
+                state.alert({ color: "red", message: "Email ou senha inválidos." });
+            } else {
+                state.alert({ color: "red", message: error.message || "Erro desconhecido ao fazer login." });
+            }
         }
     };
 
