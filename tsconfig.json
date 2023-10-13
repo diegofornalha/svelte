@@ -3,6 +3,7 @@
     "moduleResolution": "node",
     "target": "esnext",
     "module": "esnext",
+    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "sourceMap": true,
     "esModuleInterop": true,
@@ -10,14 +11,12 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "allowJs": true,
-    "checkJs": true,
-    "jsx": "preserve",
-
+    "checkJs": true
   },
   "include": [
     "src/**/*.d.ts",
     "src/**/*.ts",
     "src/**/*.js",
-    "src/**/*.svelte",
+    "src/**/*.svelte"
   ]
 }
